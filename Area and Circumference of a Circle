@@ -1,0 +1,11 @@
+#include<stdio.h>
+int main(){
+int r;
+float pi=3.141;
+
+printf("Enter the radius of circle :");
+scanf("%d",&r);
+printf("The Area of Circle is %f\n",pi*r*r);
+printf("The Circumference of Circle :%f",2*pi*r);
+return 0;
+}
