@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    long long num;
+    int sum = 0, sign = 1;  
+    
+   
+    printf("Enter a number: ");
+    scanf("%lld", &num);
+
+    
+    while (num > 0) {
+        
+        int digit = num % 10;
+        sum += sign * digit;
+        sign = -sign;
+        num /= 10;
+    }
+
+    if (sum % 11 == 0) {
+        printf("The number is divisible by 11.\n");
+    } else {
+        printf("The number is not divisible by 11.\n");
+    }
+
+    return 0;
+}
