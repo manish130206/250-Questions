@@ -1,0 +1,49 @@
+#include <stdio.h>
+#include <math.h>
+
+#define PI 3.14159
+
+int main() {
+    int choice;
+    float radius, height, circumference, volume;
+
+    printf("Cylinder Calculations\n");
+    printf("1. Calculate Circumference\n");
+    printf("2. Calculate Volume\n");
+    printf("3. Calculate Radius\n");
+    printf("Enter your choice (1, 2, or 3): ");
+    scanf("%d", &choice);
+
+    switch(choice) {
+        case 1:  
+            printf("Enter the radius: ");
+            scanf("%f", &radius);
+            circumference = 2 * PI * radius;
+            printf("Circumference of the cylinder: %.2f\n", circumference);
+            break;
+
+        case 2:  
+            printf("Enter the radius: ");
+            scanf("%f", &radius);
+            printf("Enter the height: ");
+            scanf("%f", &height);
+            volume = PI * radius * radius * height;
+            printf("Volume of the cylinder: %.2f\n", volume);
+            break;
+
+        case 3:  
+            printf("Enter the height: ");
+            scanf("%f", &height);
+            printf("Enter the volume: ");
+            scanf("%f", &volume);
+            radius = sqrt(volume / (PI * height));
+            printf("Radius of the cylinder: %.2f\n", radius);
+            break;
+
+        default:
+            printf("Invalid choice. Please enter 1, 2, or 3.\n");
+            break;
+    }
+
+    return 0;
+}
