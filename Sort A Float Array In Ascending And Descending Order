@@ -1,0 +1,60 @@
+#include <stdio.h>
+
+void sortAscending(float arr[], int n) {
+    float temp;
+    for (int i = 0; i < n - 1; i++) {
+        for (int j = 0; j < n - i - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+}
+
+void sortDescending(float arr[], int n) {
+    float temp;
+    for (int i = 0; i < n - 1; i++) {
+        for (int j = 0; j < n - i - 1; j++) {
+            if (arr[j] < arr[j + 1]) {
+                temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+}
+
+void printArray(float arr[], int n) {
+    for (int i = 0; i < n; i++) {
+        printf("%.2f ", arr[i]);
+    }
+    printf("\n");
+}
+
+int main() {
+    int n;
+
+    printf("Enter the number of elements: ");
+    scanf("%d", &n);
+
+    float arr[n];
+
+    printf("Enter the elements of the array: \n");
+    for (int i = 0; i < n; i++) {
+        scanf("%f", &arr[i]);
+    }
+    printf("\nOriginal Array: ");
+    printArray(arr, n);
+
+    sortAscending(arr, n);
+    printf("Sorted Array in Ascending Order: ");
+    printArray(arr, n);
+
+    sortDescending(arr, n);
+    printf("Sorted Array in Descending Order: ");
+    printArray(arr, n);
+
+    return 0;
+}
