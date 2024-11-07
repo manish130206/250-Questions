@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main() {
+    int N;
+    int power1, power2, power3;
+
+    printf("Enter an integer: ");
+    scanf("%d", &N);
+
+    power1 = N;        // N^1
+    power2 = N * N;    // N^2
+    power3 = N * N * N; // N^3
+
+    printf("N^1 = %d\n", power1);
+    printf("N^2 = %d\n", power2);
+    printf("N^3 = %d\n", power3);
+
+    return 0;
+}
