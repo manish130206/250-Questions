@@ -1,0 +1,42 @@
+#include <stdio.h>
+
+int findSecondLargest(int arr[], int size) {
+    int largest, secondLargest;
+    if (size < 2) {
+        return -1;
+    }
+
+    largest = secondLargest = arr[0];
+
+    for (int i = 1; i < size; i++) {
+        if (arr[i] > largest) {
+            secondLargest = largest;  
+            largest = arr[i];         
+        } else if (arr[i] > secondLargest && arr[i] != largest) {
+            secondLargest = arr[i];   
+        }
+    }
+
+    return secondLargest == largest ? -1 : secondLargest;
+}
+
+int main() {
+    int arr[100], n;
+
+    printf("Enter the number of elements in the array: ");
+    scanf("%d", &n);
+
+    printf("Enter %d elements:\n", n);
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    int secondLargest = findSecondLargest(arr, n);
+    if (secondLargest == -1) {
+        printf("There is no second largest element.\n");
+    } else {
+        printf("The second largest element is: %d\n", secondLargest);
+    }
+
+    return 0;
+}
