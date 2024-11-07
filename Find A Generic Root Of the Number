@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    double x, root;
+    int n;
+
+    printf("Enter the number: ");
+    scanf("%lf", &x);
+    printf("Enter the degree of the root (n): ");
+    scanf("%d", &n);
+
+    if (n <= 0) {
+        printf("The root degree must be a positive integer.\n");
+    } else if (x < 0 && n % 2 == 0) {
+        printf("Cannot calculate the even root of a negative number.\n");
+    } else {
+        root = pow(x, 1.0 / n); 
+        printf("The %dth root of %.2lf is: %.4lf\n", n, x, root);
+    }
+
+    return 0;
+}
