@@ -1,0 +1,56 @@
+
+#include <stdio.h>
+
+int main() {
+    int size;
+    printf("ENTER SIZE OF ARRAY :");
+    scanf("%d",&size);
+    
+    int arr[size],evensize=0,oddsize=0,e=0,o=0;
+    
+    printf("ENTER ELEMENTS OF ARRAY :");
+    for(int i=0;i<size;i++){
+        scanf("%d",&arr[i]);
+        if(arr[i]%2==0){
+            evensize++;
+        }
+        else{
+            oddsize++;
+        }
+    }
+    
+    int odd[oddsize],even[evensize];
+    
+   for(int i=0;i<size;i++){
+       if(arr[i]%2==0){
+           even[e]=arr[i];
+           e++;
+       }
+       else{
+           odd[o]=arr[i];
+           o++;
+       }
+   }
+   printf("ARRAY ELEMENTS:");
+   for(int i=0;i<size;i++){
+       printf("%d ",arr[i]);
+   }
+    printf("\n");
+    
+        printf("EVEN ELEMENTS :");
+    for(int i=0;i < evensize;i++){
+        printf("%d ",even[i]);
+    }
+    printf("\n");
+    
+     printf("ODD ELEMENTS :");
+    for(int i=0;i < oddsize;i++){
+        printf("%d ",odd[i]);
+    } 
+        
+         return 0;
+    }
+    
+   
+    
+   
