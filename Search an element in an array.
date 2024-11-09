@@ -1,0 +1,35 @@
+#include<stdio.h>
+
+int main()
+{
+    int n, find, count=0;
+    printf("ENTER SIZE OF ARRAY :");
+    scanf("%d",&n);
+    
+    int arr[n];
+    printf("ENTER THE ELEMENTS :");
+    
+    
+    for(int i=0;i<n;i++){
+     scanf("%d",&arr[i]);
+    }
+    
+    printf("ENTER THE ELEMENT TO FIND :");
+    scanf("%d",&find);
+    
+    for(int i=0;i<n;i++){
+    if(arr[i]!=find) {
+     continue;
+    }
+    else
+    printf("ELEMENT FIND AT %d LOCATION\n",i+1);
+    count++;
+    }
+    
+    
+    if(count==0) {
+    printf("ELEMENT NOT FOUND!!!!");
+    }
+    
+    return 0;
+}
