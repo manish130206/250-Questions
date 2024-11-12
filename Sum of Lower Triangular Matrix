@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+int main() {
+    int m,n,ans=0;
+    printf("Enter Row & Column of matrix: ");
+    scanf("%d %d",&m,&n);
+    if(m!=n){
+        printf("NOT A SQURE MATRIX :");
+        return 0;
+    }
+    
+    int arr[m][n];
+    printf("Enter Elements Of Array :");
+    for(int i=0;i<n;i++)
+    {
+        for(int j=0;j<n;j++)
+        {
+        scanf("%d",&arr[i][j]);
+        }
+    }
+    
+    printf("The Sum of Lower Triangular Matrix is :");
+     for(int i=0;i<n;i++)
+    {
+        for(int j=0;j<n;j++)
+        {
+        if(j<=i){
+            ans+=arr[i][j];
+        }
+        }
+    }
+    printf("%d",ans);
+    return 0;
+}
