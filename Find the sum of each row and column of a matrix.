@@ -1,0 +1,47 @@
+#include <stdio.h>
+
+int main() {
+    int m,n;
+    printf("Enter Row & Column of matrix: ");
+    scanf("%d %d",&m,&n);
+    
+    int arr[m][n],rowsum[m],columnsum[n];
+    printf("Enter Elements Of Array :");
+    for(int i=0;i<n;i++)
+    {
+        for(int j=0;j<n;j++)
+        {
+        scanf("%d",&arr[i][j]);
+        }
+    }
+    
+     for(int i=0;i<m;i++)
+    {
+         rowsum[i]=0;
+        for(int j=0;j<n;j++)
+        {
+       rowsum[i]+=arr[i][j];
+        }
+    }
+    
+       for(int j=0;j<n;j++)
+    {
+         columnsum[j]=0;
+        for(int i=0;i<m;i++)
+        {
+       columnsum[j]+=arr[i][j];
+        }
+    }
+    
+    for(int i=0;i<m;i++){
+       printf("The sum of %d row =%d",i+1,rowsum[i]);
+       printf("\n");
+    }
+      for(int i=0;i<n;i++){
+       printf("The sum of %d column =%d",i+1,columnsum[i]);
+        printf("\n");
+    }
+    
+
+    return 0;
+}
