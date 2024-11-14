@@ -1,0 +1,16 @@
+
+#include <stdio.h>
+#include<string.h>
+
+int main() {
+    char str[50];
+    int n;
+    printf("Enter String :");
+    scanf("%s",&str);
+   n=strlen(str);
+   for(int i=0;i<n;i++){
+       str[i]=str[i]+32;
+   }
+   printf("In Lower Case : %s",str);
+    return 0;
+}
