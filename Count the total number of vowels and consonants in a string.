@@ -1,0 +1,28 @@
+//Count the total number of vowels and consonants in a string.
+
+#include <stdio.h>
+#include<string.h>
+
+int main() {
+    char str[50];
+    int consonant=0,vowel=0;
+    
+    printf("Enter String : ");
+    scanf("%[^\n]s",&str);
+    
+    int len=strlen(str);
+    
+    for(int i=0;i<len;i++){
+        if(str[i]=='A'||str[i]=='E'||str[i]=='I'||str[i]=='O'||str[i]=='U'|| str[i]=='a'||str[i]=='e'||str[i]=='i'||str[i]=='o'||str[i]=='u'){
+           vowel++;
+        }
+        else{
+           consonant++;
+        }
+    }
+    
+     printf("Total Number Of Vowel = %d\n",vowel);
+    printf("Total Number Of Consonant = %d\n",consonant);
+      
+    return 0;
+}
