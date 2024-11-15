@@ -1,0 +1,25 @@
+//Count the total number of words in a string.
+
+#include <stdio.h>
+#include<string.h>
+
+int main() {
+    char str[50];
+    int count=0;
+    
+    printf("Enter String : ");
+    scanf("%[^\n]s",&str);
+    
+    int len=strlen(str);
+    
+    for(int i=0;i<len;i++){
+        if(str[i]==' ')
+        {
+           count++;
+        }
+    }
+    
+     printf("Total Number Of Word = %d\n",count+1);
+      
+    return 0;
+}
