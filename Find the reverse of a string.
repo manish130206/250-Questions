@@ -1,0 +1,23 @@
+//Find the reverse of a string.
+
+#include <stdio.h>
+#include<string.h>
+
+int main() {
+    char str[50],str1[50];
+    int count=0,len;
+    
+    printf("Enter String : ");
+    scanf("%[^\n]s",&str);
+    
+     len=strlen(str);
+     
+     for(int i=len-1;i>=0;i--){
+         str1[count]=str[i];
+         count++;
+     }
+    
+     printf("The reverse of a string : = %s\n",str1);
+      
+    return 0;
+}
