@@ -1,0 +1,27 @@
+//Find the last occurrence of a character in a given string
+#include <stdio.h>
+#include<string.h>
+
+int main() {
+   
+   char str[50],ch;
+   int last;
+   
+   printf("Enter A String :");
+   scanf("%s",&str);
+   
+   int len =strlen(str);
+   
+   printf("Enter a Character to find :");
+   scanf(" %c",&ch);
+   
+   for(int i=0;i<len;i++){
+       if(str[i]==ch){
+            last=i;
+       }
+   }
+   
+   printf("Last occurrence of the character : %d",last+1);
+
+    return 0;
+}
