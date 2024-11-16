@@ -1,0 +1,129 @@
+//Find the highest frequency character in a string.
+#include <stdio.h>
+#include<string.h>
+
+int main() {
+   
+   char str[50];
+   int ch[26]={0},result;
+   
+   printf("Enter A String :");
+   scanf("%s",&str);
+   
+   int len =strlen(str);
+   
+   for(int i=0;i<len;i++){
+       if(str[i]=='a'||str[i]=='A'){
+           ch[0]=ch[0]+1;
+       }
+      else if(str[i]=='b'||str[i]=='B'){
+           ch[1]=ch[1]+1;
+       }
+      else if(str[i]=='c'||str[i]=='C'){
+           ch[2]=ch[2]+1;
+       }
+       else if(str[i]=='d'||str[i]=='D'){
+           ch[3]=ch[3]+1;
+       }
+        else if(str[i]=='e'||str[i]=='E'){
+           ch[4]=ch[4]+1;
+       }
+        else if(str[i]=='f'||str[i]=='F'){
+           ch[5]=ch[5]+1;
+       }
+        else if(str[i]=='g'||str[i]=='G'){
+           ch[6]=ch[6]+1;
+       }
+        else if(str[i]=='h'||str[i]=='H'){
+          
+           ch[7]=ch[7]+1;
+       }
+        else if(str[i]=='i'||str[i]=='I'){
+           
+           ch[8]=ch[8]+1;
+       }
+        else if(str[i]=='j'||str[i]=='J'){
+           
+           ch[9]=ch[9]+1;
+       }
+        else if(str[i]=='k'||str[i]=='K'){
+           
+           ch[10]=ch[10]+1;
+       }
+        else if(str[i]=='l'||str[i]=='L'){
+           
+           ch[11]=ch[11]+1;
+       }
+        else if(str[i]=='m'||str[i]=='M'){
+           
+           ch[12]=ch[12]+1;
+       }
+        else if(str[i]=='n'||str[i]=='N'){
+          
+           ch[13]=ch[13]+1;
+       }
+        else if(str[i]=='o'||str[i]=='O'){
+           ch[14]=ch[14]+1;
+       }
+        else if(str[i]=='p'||str[i]=='P'){
+           
+           ch[15]=ch[15]+1;
+       }
+        else if(str[i]=='q'||str[i]=='Q'){
+           
+           ch[16]=ch[16]+1;
+       }
+        else if(str[i]=='r'||str[i]=='R'){
+           
+           ch[17]=ch[18]+1;
+       }
+        else if(str[i]=='s'||str[i]=='S'){
+           
+           ch[25]=ch[18]+1;
+       }
+        else if(str[i]=='t'||str[i]=='T'){
+          
+           ch[19]=ch[19]+1;
+       }
+        else if(str[i]=='u'||str[i]=='U'){
+           
+           ch[20]=ch[20]+1;
+       }
+        else if(str[i]=='v'||str[i]=='V'){
+            ch[21]=ch[21]+1;
+       }
+        else if(str[i]=='w'||str[i]=='W'){
+           
+           ch[22]=ch[22]+1;
+       }
+        else if(str[i]=='x'||str[i]=='X'){
+           ch[23]=ch[23]+1;
+       }
+        else if(str[i]=='y'||str[i]=='Y'){
+           ch[24]=ch[24]+1;
+       }
+       else(str[i]=='z'||str[i]=='Z'){
+           ch[25]=ch[25]+1;
+       }
+   }
+   result = 0;
+   int index=0; 
+   for(int i=0;i<26;i++){
+    //   printf("%d\n",ch[i]);
+    //   if(ch[i]>ch[i+1]){
+    //       result =ch[i];
+    //   }
+    //   else{
+    //       result=ch[i+1];
+    //   }
+    if(ch[i]>result){
+        result =ch[i];
+        index = i;
+    }
+   }
+//   printf("%d",index);
+   char ans = 'A' + index;
+   printf("the highest frequency character in a string is %c",ans);
+
+    return 0;
+}
