@@ -1,0 +1,13 @@
+//Cube of any number using the function.
+#include <stdio.h>
+ void cube(int a){
+     printf("The Cude  of %d is %d",a,a*a*a);
+ }
+int main() {
+    int n;
+    printf("Enter Number :");
+    scanf("%d",&n);
+    
+    cube(n);
+    return 0;
+}
