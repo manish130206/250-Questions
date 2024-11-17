@@ -1,0 +1,25 @@
+//Find the diameter, circumference and area of a circle using functions.
+#include <stdio.h>
+#define pi 3.141
+
+  void diam(int t){
+     printf("The Diameter = %d\n",2*t);
+ }
+ 
+ void cir(int c){
+     printf("The Circumference = %f\n",2*c*pi);
+ }
+ 
+  void area(int a){
+     printf("The area = %f",pi*a*a);
+ }
+ 
+int main() {
+    int n;
+    printf("Enter Radius :");
+    scanf("%d",&n);
+    diam(n);
+    cir(n);
+    area(n);
+    return 0;
+}
