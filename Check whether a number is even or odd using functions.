@@ -1,0 +1,21 @@
+//Check whether a number is even or odd using functions.
+
+#include <stdio.h>
+
+ void check(int a){
+     if(a%2==0){
+         printf("%d is Even Number",a);
+     }
+     else{
+         printf("%d is Odd Number",a);
+     }
+ }
+
+int main() {
+    int m;
+    
+    printf("Enter Two Numbers :");
+    scanf("%d",&m);
+    check(m);
+    return 0;
+}
