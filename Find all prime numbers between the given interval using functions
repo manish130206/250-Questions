@@ -1,0 +1,41 @@
+
+#include <stdio.h>
+#include<math.h>
+
+int check_prime(int n){
+    int count=0;
+    for(int i=2;i<n;i++){
+        
+        if(n%i==0){
+            count++;
+        }
+    }
+    if(count==0){
+        return 1;
+    }
+    else{
+        return 0;
+    }
+}
+
+void count_prime(int m, int n){
+    int count=0;
+    for(int i=m; i<=n; i++){
+        if(check_prime(i)){
+            count++;
+            printf("%d ",i);
+        }
+    }
+    printf("\n count = %d ",count);
+}
+
+
+int main() {
+    int m,n;
+    printf("Enter First And Last Interval :");
+    scanf("%d %d",&m,&n);
+    
+    count_prime(m,n);
+    
+    return 0;
+}
