@@ -1,0 +1,44 @@
+#include <stdio.h>
+#include <string.h>
+#include <limits.h>
+
+void findLowestFrequencyChar(char *str) {
+    int freq[256] = {0}; // Array to store frequency of each character
+    int length = strlen(str);
+
+    // Calculate frequencies of all characters
+    for (int i = 0; i < length; i++) {
+        freq[(unsigned char)str[i]]++;
+    }
+
+    // Find the character with the lowest frequency (ignoring spaces and nulls)
+    int minFreq = INT_MAX;
+    char minChar = '\0';
+
+    for (int i = 0; i < length; i++) {
+        if (str[i] != ' ' && freq[(unsigned char)str[i]] > 0 && freq[(unsigned char)str[i]] < minFreq) {
+            minFreq = freq[(unsigned char)str[i]];
+            minChar = str[i];
+        }
+    }
+
+    if (minChar != '\0') {
+        printf("Character with the lowest frequency: '%c'\n", minChar);
+        printf("Frequency: %d\n", minFreq);
+    } else {
+        printf("No valid character found.\n");
+    }
+}
+
+int main() {
+    char str[100];
+    printf("Enter a string: ");
+    fgets(str, sizeof(str), stdin);
+
+    // Remove newline character if present
+    str[strcspn(str, "\n")] = 0;
+
+    findLowestFrequencyChar(str);
+
+    return 0;
+}
