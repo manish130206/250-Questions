@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+void table(int a, int x) {
+    if (x > 10) {
+        return;
+    } else {
+        printf("%d\n", a * x);
+        table(a, x + 1);
+    }
+}
+
+int main() {
+    int n;
+    printf("Enter Number for table: ");
+    scanf("%d", &n);
+    table(n, 1);  // Pass the starting value explicitly
+
+    return 0;
+}
